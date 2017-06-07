@@ -2,7 +2,6 @@
   "name": "tyrion-itunes",
   "version": "1.0.0",
   "description": "responsive browser for iTunes API",
-  // "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
