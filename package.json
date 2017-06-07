@@ -1,0 +1,27 @@
+{
+  "name": "tyrion-itunes",
+  "version": "1.0.0",
+  "description": "responsive browser for iTunes API",
+  // "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo 'tests not implemented'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teebszet/tyrion-itunes.git"
+  },
+  "author": "Tim Man",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teebszet/tyrion-itunes/issues"
+  },
+  "homepage": "https://github.com/teebszet/tyrion-itunes#readme",
+  "dependencies": {
+    "next": "^2.4.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
