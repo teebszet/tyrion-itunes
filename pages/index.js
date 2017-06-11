@@ -1,54 +1,37 @@
-const Filter = ({items = []}) => (
-  <ul>
-    { items.map(({value, label}) => (<li>{label}</li>)) }
-  </ul>
-)
+import Head from 'next/head'
+import Filter from '../components/Filter'
+import Grid from '../components/Grid'
+import Search from '../components/Search'
 
-const Search = () => (
-  <input placeholder='search'/>
-)
-
-const Grid = ({items = []}) => (
-  <main>
-    <ul className='grid'>
-    { items.map(({src, title}) => (
-      <li>
-        <img src={src} />
-        <h4>{title}</h4>
-      </li>
-    ))}
-    </ul>
-    <style jsx>{`
-      .grid {
-        display: flex;
-        flex-wrap: wrap;
-        margin: -0.5em;
-      }
-      .grid > * {
-        flex: 1 0 5em;
-        margin: 0.5em;
-      }
-      li {
-        position: relative;
-      }
-      h4 {
-        position: absolute;
-        bottom: 0;
-      }
-    `}</style>
-  </main>
-)
 
 export const Index = () => (
   <div>
+    <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </Head>
     <Grid items={gridItems()}/>
-    <Search/>
-    <Filter items={filterItems()}/>
+    <section>
+      <Search/>
+      <Filter items={filterItems()}/>
+    </section>
+    <style jsx>{`
+      section {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    `}</style>
     <style jsx global>{`
       * {
-        list-style: none;
         padding: 0;
         margin: 0;
+        vertical-align: baseline;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      ul {
+        list-style: none;
       }
     `}</style>
   </div>
