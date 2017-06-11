@@ -12,7 +12,8 @@ const Grid = ({items = []}) => (
       .grid {
         display: flex;
         flex-wrap: wrap;
-        margin: -0.5em;
+        overflow-x: hidden;
+        margin: 0.1em;
       }
       .grid > * {
         flex: 1 0 5em;

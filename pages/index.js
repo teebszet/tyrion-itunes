@@ -5,9 +5,9 @@ import Search from '../components/Search'
 
 
 export const Index = () => (
-  <div>
+  <div className='body'>
     <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1" />
     </Head>
     <nav>
       <Filter items={filterItems()}/>
@@ -21,7 +21,7 @@ export const Index = () => (
       nav {
         display: flex;
         flex-wrap: wrap;
-        width: 100vw;
+        width: 100%;
         position: fixed;
         top: 0;
         z-index: 1;
@@ -29,19 +29,19 @@ export const Index = () => (
         box-shadow: 1px 1px 10px grey;
       }
       main {
-        width: 100vw;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
         margin-top: 7em;
         padding: 0.1em;
         z-index: 2;
-        overflow-x: hidden;
+      }
+      .body {
+        font-family: sans-serif;
+        width: 100%;
       }
     `}</style>
     <style jsx global>{`
-      body {
-        font-family: sans-serif;
-        width: 100%;
-        overflow-x: hidden;
-      }
     `}</style>
   </div>
 )
@@ -107,6 +107,6 @@ const gridItems = () => ([
   {src: 'http://placehold.it/150x100', title: 'Hulk'},
   {src: 'http://placehold.it/150x100', title: 'Hulk'},
   {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'last'},
 ])
 
