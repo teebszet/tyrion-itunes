@@ -2,12 +2,10 @@ const Search = () => (
   <div>
     <form>
       <input className='search'
-        type='search'
+        type='text'
         autocapitalize='none'
         placeholder='search'/>
-      <button className='submit'>
-        s
-      </button>
+      <button className='submit'>s</button>
     </form>
     <style jsx>{`
       div {
@@ -22,7 +20,7 @@ const Search = () => (
         padding: 0.5em;
         position: absolute;
         right: 0;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0);
         border: none;
         margin: 2px;
       }

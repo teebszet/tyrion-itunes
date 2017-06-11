@@ -25,7 +25,7 @@ export const Index = () => (
         position: fixed;
         top: 0;
         z-index: 1;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: grey;
         box-shadow: 1px 1px 10px grey;
       }
       main {
