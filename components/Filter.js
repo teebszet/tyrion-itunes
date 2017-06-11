@@ -8,6 +8,7 @@ const Filter = ({items = []}) => (
     <style jsx>{`
       div {
         width: 100%;
+        background-color: grey;
       }
       ul {
         display: flex;
@@ -15,7 +16,6 @@ const Filter = ({items = []}) => (
         justify-content: space-between;
         max-width: 26em;
         padding: 0.25em;
-        background-color: grey;
       }
       li {
         font-size: 1.1rem;

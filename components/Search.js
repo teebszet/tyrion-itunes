@@ -1,15 +1,36 @@
 const Search = () => (
   <div>
-    <input placeholder='search'/>
+    <form>
+      <input className='search'
+        type='search'
+        autocapitalize='none'
+        placeholder='search'/>
+      <button className='submit'>
+        s
+      </button>
+    </form>
     <style jsx>{`
       div {
         width: 100%;
-        max-width: 26em;
       }
-      input {
+      form {
+        width: inherit;
+        position: relative;
+      }
+      .submit {
+        font-size: 1.2rem;
+        padding: 0.5em;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        border: none;
+        margin: 2px;
+      }
+      .search {
         width: 100%;
         font-size: 1.2rem;
         padding: 0.5em;
+        padding-right: 5em;
       }
     `}</style>
   </div>

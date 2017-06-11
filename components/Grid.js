@@ -1,5 +1,5 @@
 const Grid = ({items = []}) => (
-  <main>
+  <div>
     <ul className='grid'>
     { items.map(({src, title}) => (
       <li>
@@ -24,8 +24,9 @@ const Grid = ({items = []}) => (
       h4 {
         position: absolute;
         bottom: 0;
+        padding: 0.5em;
       }
     `}</style>
-  </main>
+  </div>
 )
 export default Grid;

@@ -9,18 +9,29 @@ export const Index = () => (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
-    {/* <Grid items={gridItems()}/> */}
     <nav>
       <Filter items={filterItems()}/>
       <Search/>
     </nav>
+    <main>
+      <Grid items={gridItems()}/>
+    </main>
     <style jsx>{`
       nav {
-        position: fixed;
-        bottom: 0;
         display: flex;
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
         width: 100vw;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 1px 1px 10px grey;
+      }
+      main {
+        width: 100vw;
+        margin-top: 7em;
+        padding: 0.1em;
+        z-index: 2;
       }
     `}</style>
     <style jsx global>{`
@@ -69,6 +80,21 @@ const filterItems = () => ([
 ])
 
 const gridItems = () => ([
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
+  {src: 'http://placehold.it/150x100', title: 'Hulk'},
   {src: 'http://placehold.it/150x100', title: 'Hulk'},
   {src: 'http://placehold.it/150x100', title: 'Hulk'},
   {src: 'http://placehold.it/150x100', title: 'Hulk'},
