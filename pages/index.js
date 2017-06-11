@@ -9,16 +9,18 @@ export const Index = () => (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
-    <Grid items={gridItems()}/>
-    <section>
-      <Search/>
+    {/* <Grid items={gridItems()}/> */}
+    <nav>
       <Filter items={filterItems()}/>
-    </section>
+      <Search/>
+    </nav>
     <style jsx>{`
-      section {
+      nav {
         position: fixed;
         bottom: 0;
-        width: 100%;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        width: 100vw;
       }
     `}</style>
     <style jsx global>{`

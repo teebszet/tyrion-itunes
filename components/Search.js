@@ -4,6 +4,7 @@ const Search = () => (
     <style jsx>{`
       div {
         width: 100%;
+        max-width: 26em;
       }
       input {
         width: 100%;

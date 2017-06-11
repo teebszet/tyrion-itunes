@@ -6,6 +6,9 @@ const Filter = ({items = []}) => (
       )) }
     </ul>
     <style jsx>{`
+      div {
+        width: 100%;
+      }
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -15,7 +18,7 @@ const Filter = ({items = []}) => (
         background-color: grey;
       }
       li {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         display: flex;
         justify-content: center;
         align-items: middle;
