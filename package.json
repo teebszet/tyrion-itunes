@@ -10,7 +10,7 @@
     "heroku-postbuild": "next build"
   },
   "engines": {
-    "node": "8.x.x"
+    "node": "8.0.x"
   },
   "repository": {
     "type": "git",
