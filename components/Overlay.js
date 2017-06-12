@@ -1,31 +1,35 @@
-const Overlay = ({description = '', buyUrl, handleClose}) => (
-  <section className={description ? 'is-visible' : ''}>
+const Overlay = ({description = '', buyUrl, handleClose, isOverlayVisible}) => (
+  <section className={isOverlayVisible ? 'is-visible' : ''}>
     <img value='' src='/static/icon-close.svg' onClick={handleClose}/>
-    <p>{description}</p>
+    <div className='description-container'>
+      <p>{description}</p>
+    </div>
     <button>
-      <a href={buyUrl}>more</a>
+      <a href={buyUrl} target='_blank'>more</a>
     </button>
     <style jsx>{`
       section {
         z-index: 2;
         width: 100%;
+        max-width: 26em;
         background-color: #fafafa;
         opacity: 0.9;
         transform: translateX(-100%);
-        position: absolute;
+        position: fixed;
         transition: 1s ease transform;
       }
       .is-visible {
         transform: translateX(0);
         transition: 1s ease transform;
       }
-      detail-animation: {
-        0% translateX(-100%);
-        100% translateX(0);
+      .description-container {
+        overflow-y: auto;
+        max-height: 50vh;
+        width: 100%;
       }
       p {
         font-size: 1rem;
-        margin: 3em 2em 0 2em;
+        margin: 0 2em 0 2em;
       }
       img, button {
         float: right;

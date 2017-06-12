@@ -10,13 +10,24 @@ class Layout extends React.Component {
   constructor(props) {
     super(props)
     this.handleSelect = this.handleSelect.bind(this);
+    this.handleClose = this.handleClose.bind(this);
     this.state = {
       selectedItem: null,
+      isOverlayVisible: null,
     }
   }
   handleSelect(e) {
     e.preventDefault()
-    this.setState({selectedItem: e.currentTarget.value})
+    this.setState({
+      selectedItem: e.currentTarget.value,
+      isOverlayVisible: true,
+    })
+  }
+  handleClose(e) {
+    e.preventDefault()
+    this.setState({
+      isOverlayVisible: false,
+    })
   }
   render() {
     const overlayProps = _find(gridItems(this.props.results),
@@ -30,11 +41,14 @@ class Layout extends React.Component {
           <Filter items={filterItems()} selected={this.props.selectedFilter}/>
           <Search/>
         </nav>
-        <Overlay {...overlayProps} handleClose={this.handleSelect}/>
+        <Overlay {...overlayProps}
+          isOverlayVisible={this.state.isOverlayVisible}
+          handleClose={this.handleClose}/>
         <main>
           <Grid
             items={gridItems(this.props.results)}
             handleSelect={this.handleSelect}
+            isOverlayVisible={this.state.isOverlayVisible}
           />
         </main>
         <style jsx>{layoutStyle}</style>

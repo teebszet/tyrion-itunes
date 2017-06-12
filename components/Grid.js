@@ -1,5 +1,5 @@
-const Grid = ({items = [], handleSelect}) => (
-  <div className='grid-container'>
+const Grid = ({items = [], handleSelect, isOverlayVisible}) => (
+  <div className={isOverlayVisible ? 'grid-container is-hidden' : 'grid-container'}>
     <ul className='grid'>
     { items.map(({src, title, value}, id) => (
       <li key={id} onClick={handleSelect} value={value}>
@@ -14,6 +14,10 @@ const Grid = ({items = [], handleSelect}) => (
       .grid-container {
         position: absolute;
         z-index: 2;
+      }
+      .is-hidden {
+        opacity: 0.2;
+        transition: 2s ease opacity;
       }
       .grid {
         display: flex;
