@@ -25,7 +25,8 @@ export const Index = () => (
         position: fixed;
         top: 0;
         z-index: 1;
-        background-color: grey;
+        background-color: #fafafa;
+        color: #222;
         box-shadow: 1px 1px 10px grey;
       }
       main {
@@ -88,25 +89,25 @@ const filterItems = () => ([
 ])
 
 const gridItems = () => ([
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'Hulk'},
-  {src: 'http://placehold.it/150x100', title: 'last'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'Hulk'},
+  {src: 'http://placehold.it/100x100', title: 'last'},
 ])
 

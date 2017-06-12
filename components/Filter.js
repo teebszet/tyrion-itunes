@@ -8,7 +8,6 @@ const Filter = ({items = []}) => (
     <style jsx>{`
       div {
         width: 100%;
-        background-color: grey;
       }
       ul {
         display: flex;
