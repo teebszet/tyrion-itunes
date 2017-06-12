@@ -3,7 +3,9 @@ const Grid = ({items = []}) => (
     <ul className='grid'>
     { items.map(({src, title}, id) => (
       <li key={id}>
-        <img src={src} />
+        <div className='img__frame'>
+          <img src={src} />
+        </div>
         <h4>{title}</h4>
       </li>
     ))}
@@ -23,7 +25,19 @@ const Grid = ({items = []}) => (
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+      .img__frame {
         width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        max-width: 100px;
+        max-height: 100px;
+        width: auto;
+        height: auto;
       }
       h4 {
         text-align: center;
