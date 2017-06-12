@@ -1,5 +1,6 @@
 const Search = () => (
   <div>
+    {/* TODO more validation */}
     <form>
       <input className='search'
         name='search'

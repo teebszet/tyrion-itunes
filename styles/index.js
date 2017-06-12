@@ -8,7 +8,7 @@ export default `
     z-index: 1;
     background-color: #fafafa;
     color: #222;
-    box-shadow: 1px 1px 10px grey;
+    box-shadow: 1px 1px 10px lightgrey;
   }
   main {
     width: 100%;

@@ -38,6 +38,7 @@ const Grid = ({items = []}) => (
         max-height: 100px;
         width: auto;
         height: auto;
+        box-shadow: 1px 1px 5px lightgrey;
       }
       h4 {
         text-align: center;
