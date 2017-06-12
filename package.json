@@ -6,7 +6,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "echo 'tests not implemented'"
+    "test": "echo 'tests not implemented'",
+    "heroku-postbuild": "next build"
   },
   "repository": {
     "type": "git",
