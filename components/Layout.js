@@ -16,12 +16,11 @@ class Layout extends React.Component {
   }
   handleSelect(e) {
     e.preventDefault()
-    console.log(e.currentTarget.value)
     this.setState({selectedItem: e.currentTarget.value})
   }
   render() {
-    const overlayProps = _find(this.props.results, {value: this.state.selectedItem})
-    console.log(overlayProps)
+    const overlayProps = _find(gridItems(this.props.results),
+      {value: this.state.selectedItem})
     return (
       <div className='body'>
         <Head>
@@ -31,8 +30,8 @@ class Layout extends React.Component {
           <Filter items={filterItems()} selected={this.props.selectedFilter}/>
           <Search/>
         </nav>
+        <Overlay {...overlayProps} handleClose={this.handleSelect}/>
         <main>
-          <Overlay {...overlayProps}/>
           <Grid
             items={gridItems(this.props.results)}
             handleSelect={this.handleSelect}

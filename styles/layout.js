@@ -5,7 +5,7 @@ export default `
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     background-color: #fafafa;
     color: #222;
     box-shadow: 1px 1px 10px lightgrey;
@@ -16,7 +16,7 @@ export default `
     max-width: 100%;
     margin-top: 7em;
     padding: 0.1em;
-    z-index: 2;
+    z-index: 1;
     position: relative;
   }
   .body {

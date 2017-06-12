@@ -1,5 +1,5 @@
 const Grid = ({items = [], handleSelect}) => (
-  <div>
+  <div className='grid-container'>
     <ul className='grid'>
     { items.map(({src, title, value}, id) => (
       <li key={id} onClick={handleSelect} value={value}>
@@ -11,6 +11,10 @@ const Grid = ({items = [], handleSelect}) => (
     ))}
     </ul>
     <style jsx>{`
+      .grid-container {
+        position: absolute;
+        z-index: 2;
+      }
       .grid {
         display: flex;
         flex-wrap: wrap;
