@@ -1,8 +1,14 @@
-const Filter = ({items = []}) => (
+import Link from 'next/link'
+
+const Filter = ({items = [], selected}) => (
   <div>
     <ul>
       { items.map(({value, label}) => (
-        <li key={value}>{label}</li>
+        <li key={value} className={value === selected ? 'selected' : ''}>
+          <Link href={`/${value}`}>
+            <a>{label}</a>
+          </Link>
+        </li>
       )) }
     </ul>
     <style jsx>{`
@@ -21,7 +27,18 @@ const Filter = ({items = []}) => (
         display: flex;
         justify-content: center;
         align-items: middle;
-        padding: 0.5em 0.25em;
+        padding: 0.5em 0.25em 0.25em 0.25em;
+        margin-bottom: 0.25em;
+      }
+      a {
+        text-decoration: none;
+        color: #222;
+      }
+      .selected {
+        border-bottom: 3px solid #4285f4;
+      }
+      .selected a {
+        color: #4285f4
       }
     `}</style>
   </div>

@@ -3,7 +3,7 @@ const Search = () => (
     <form>
       <input className='search'
         type='text'
-        autocapitalize='none'
+        autoCapitalize='none'
         placeholder='search'/>
       <button className='submit'>s</button>
     </form>

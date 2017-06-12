@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/teebszet/tyrion-itunes#readme",
   "dependencies": {
+    "isomorphic-unfetch": "^1.0.0",
+    "lodash": "^4.17.4",
     "next": "^2.4.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"

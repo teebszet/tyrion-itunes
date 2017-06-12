@@ -1,8 +1,8 @@
 const Grid = ({items = []}) => (
   <div>
     <ul className='grid'>
-    { items.map(({src, title}) => (
-      <li>
+    { items.map(({src, title}, id) => (
+      <li key={id}>
         <img src={src} />
         <h4>{title}</h4>
       </li>
@@ -20,12 +20,15 @@ const Grid = ({items = []}) => (
         margin: 0.5em;
       }
       li {
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
       }
       h4 {
-        position: absolute;
-        bottom: 0;
+        text-align: center;
         padding: 0.5em;
+        font-size: 0.5rem;
       }
     `}</style>
   </div>
