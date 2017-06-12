@@ -17,6 +17,7 @@ export default `
     margin-top: 7em;
     padding: 0.1em;
     z-index: 2;
+    position: relative;
   }
   .body {
     font-family: sans-serif;

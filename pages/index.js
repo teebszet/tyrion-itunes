@@ -19,7 +19,6 @@ export async function getLayoutInitialProps({
   const {search = ''} = query;
   // TODO use a uri builder
   const uri = `https://itunes.apple.com/search?media=${media}&term=${search}&limit=12`
-  console.log(uri)
   const res = await fetch(uri)
   const data = await res.json()
   console.log('result count: ', data.resultCount)
@@ -30,8 +29,9 @@ export async function getLayoutInitialProps({
       'trackName',
       'longDescription',
       'trackViewUrl',
+      'trackId',
     ])) : [],
-    selected: media,
+    selectedFilter: media,
   }
 }
 Index.getInitialProps = getLayoutInitialProps;

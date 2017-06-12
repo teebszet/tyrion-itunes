@@ -1,8 +1,8 @@
-const Grid = ({items = []}) => (
+const Grid = ({items = [], handleSelect}) => (
   <div>
     <ul className='grid'>
-    { items.map(({src, title}, id) => (
-      <li key={id}>
+    { items.map(({src, title, value}, id) => (
+      <li key={id} onClick={handleSelect} value={value}>
         <div className='img__frame'>
           <img src={src} />
         </div>
