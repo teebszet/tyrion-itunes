@@ -11,9 +11,14 @@ export const Index = (props) => (
     <CSSReset />
   </div>
 )
-export async function getLayoutInitialProps({pathname = '/'} = {}) {
+export async function getLayoutInitialProps({
+  pathname = '/',
+  query = {},
+} = {}) {
   const media = pathname === '/' ? 'movie' : pathname.replace(/^\//, '');
-  const uri = `https://itunes.apple.com/search?media=${media}&term=the&limit=12`
+  const {search = ''} = query;
+  // TODO use a uri builder
+  const uri = `https://itunes.apple.com/search?media=${media}&term=${search}&limit=12`
   console.log(uri)
   const res = await fetch(uri)
   const data = await res.json()

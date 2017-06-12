@@ -2,10 +2,12 @@ const Search = () => (
   <div>
     <form>
       <input className='search'
+        name='search'
         type='text'
-        autoCapitalize='none'
-        placeholder='search'/>
-      <button className='submit'>s</button>
+        autoCapitalize='none'/>
+      <button className='submit'>
+        <img src='/static/icon-search.svg' />
+      </button>
     </form>
     <style jsx>{`
       div {
@@ -23,6 +25,11 @@ const Search = () => (
         background-color: rgba(255, 255, 255, 0);
         border: none;
         margin: 2px;
+        color: #222;
+        cursor: pointer;
+      }
+      .submit:hover {
+        opacity: 0.8;
       }
       .search {
         width: 100%;

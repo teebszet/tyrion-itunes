@@ -34,6 +34,9 @@ const Filter = ({items = [], selected}) => (
         text-decoration: none;
         color: #222;
       }
+      a:hover {
+        opacity: 0.8;
+      }
       .selected {
         border-bottom: 3px solid #4285f4;
       }
