@@ -1,8 +1,8 @@
-const Overlay = ({description = '', buyUrl, handleClose, isOverlayVisible}) => (
+const Overlay = ({title = '', description = '', buyUrl, handleClose, isOverlayVisible}) => (
   <section className={isOverlayVisible ? 'is-visible' : ''}>
     <img value='' src='/static/icon-close.svg' onClick={handleClose}/>
     <div className='description-container'>
-      <p>{description}</p>
+      <p>{description || title}</p>
     </div>
     <button>
       <a href={buyUrl} target='_blank'>more</a>

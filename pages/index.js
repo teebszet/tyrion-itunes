@@ -22,6 +22,7 @@ export async function getLayoutInitialProps({
   const res = await fetch(uri)
   const data = await res.json()
   console.log('result count: ', data.resultCount)
+  console.log(uri)
   return {
     ...data,
     results: data.results ? data.results.map(item => _pick(item, [
