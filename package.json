@@ -23,6 +23,7 @@
     "url": "https://github.com/teebszet/tyrion-itunes/issues"
   },
   "homepage": "https://github.com/teebszet/tyrion-itunes#readme",
+  "website": "https://tyrion-itunes.herokuapp.com",
   "dependencies": {
     "isomorphic-unfetch": "^1.0.0",
     "lodash": "^4.17.4",

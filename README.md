@@ -16,6 +16,7 @@ npm run dev
 ```
 
 ## deploy
+see here: https://tyrion-itunes.herokuapp.com/podcast?search=javascript
 ```
 npm install
 npm run build
