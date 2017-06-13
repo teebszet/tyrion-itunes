@@ -3,6 +3,7 @@ export default `
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    max-width: 60em;
     position: fixed;
     top: 0;
     z-index: 3;
@@ -13,7 +14,6 @@ export default `
   main {
     width: 100%;
     height: auto;
-    max-width: 100%;
     margin-top: 7em;
     padding: 0.1em;
     z-index: 1;
@@ -22,5 +22,8 @@ export default `
   .body {
     font-family: sans-serif;
     width: 100%;
+    max-width: 60em;
+    margin-left: auto;
+    margin-right: auto;
   }
 `

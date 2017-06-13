@@ -13,14 +13,15 @@ const Overlay = ({description = '', buyUrl, handleClose, isOverlayVisible}) => (
         width: 100%;
         max-width: 26em;
         background-color: #fafafa;
-        opacity: 0.9;
+        opacity: 0;
         transform: translateX(-100%);
         position: fixed;
-        transition: 1s ease transform;
+        transition: 1s ease transform, 1s ease opacity;
       }
       .is-visible {
         transform: translateX(0);
-        transition: 1s ease transform;
+        transition: 1s ease transform, 1s ease opacity;
+        opacity: 0.9
       }
       .description-container {
         overflow-y: auto;
