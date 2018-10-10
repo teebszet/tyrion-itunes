@@ -8,7 +8,7 @@
     "start": "next start",
     "test": "echo 'tests not implemented'",
     "heroku-postbuild": "next build",
-    "heroku-start": "next start --port $PORT"
+    "heroku-start": "next start --port $PORT --host https://tyrion-itunes.herokuapp.com"
   },
   "engines": {
     "node": "6.9.x"
