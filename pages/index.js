@@ -16,7 +16,7 @@ export async function getLayoutInitialProps({
   query = {},
 } = {}) {
   const media = pathname === '/' ? 'movie' : pathname.replace(/^\//, '');
-  const {search = ''} = query;
+  const {search = 'the'} = query; // default query to 'the'
   // TODO use a uri builder
   const uri = `https://itunes.apple.com/search?media=${media}&term=${search}&limit=12`
   const res = await fetch(uri)
