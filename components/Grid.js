@@ -35,15 +35,15 @@ const Grid = ({items = [], handleSelect, isOverlayVisible}) => (
         align-items: center;
       }
       .img__frame {
-        width: 100px;
-        height: 100px;
+        width: auto;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
       }
       img {
-        max-width: 100px;
-        max-height: 100px;
+        max-width: 200px;
+        max-height: 200px;
         width: auto;
         height: auto;
         box-shadow: 1px 1px 5px lightgrey;

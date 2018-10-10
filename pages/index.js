@@ -25,13 +25,17 @@ export async function getLayoutInitialProps({
   console.log(uri)
   return {
     ...data,
-    results: data.results ? data.results.map(item => _pick(item, [
-      'artworkUrl100',
-      'trackName',
-      'longDescription',
-      'trackViewUrl',
-      'trackId',
-    ])) : [],
+    results: data.results ? data.results
+      .map(item => ({
+        ..._pick(item, [
+          'artworkUrl600',
+          'trackName',
+          'longDescription',
+          'trackViewUrl',
+          'trackId',
+        ]), 
+        image: item.artworkUrl600 || item.artworkUrl100
+      })) : [],
     selectedFilter: media,
   }
 }

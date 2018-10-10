@@ -69,7 +69,7 @@ export const filterItems = () => ([
 const gridItems = (results = []) => (
   results.map(item => ({
     value: item.trackId,
-    src: item.artworkUrl100,
+    src: item.image,
     title: item.trackName,
     description: item.longDescription,
     buyUrl: item.trackViewUrl,
